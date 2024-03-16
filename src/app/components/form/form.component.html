@@ -1,0 +1,28 @@
+<form [formGroup]="fg">
+  <label for="perso_name">Nom du personnage</label>
+  <input formControlName="perso_name" type="text" name="" id="">
+
+  <label for="race">Race</label>
+  <select formControlName="race">
+      <option *ngFor="let race of races" [value]="race.name">{{ race.name }}</option>
+  </select>
+
+  <label for="classe">Classe</label>
+  <select formControlName="classe">
+      <option *ngFor="let classe of classes" [value]="classe.name">{{ classe.name }}</option>
+  </select>
+
+  <label for="">Historique</label>
+  <input formControlName="history" type="text" name="" id="">
+
+  <label for="">Alignement</label>
+  <input formControlName="alignment" type="text" name="" id="">
+
+  <label for="">Nom du joueur</label>
+  <input formControlName="name_player" type="text" name="" id="">
+
+  <label for="">Points d'expérience</label>
+  <input formControlName="pts_exp" type="text" name="" id="">
+
+  <button (click)="submit()">Submit</button>
+</form>
